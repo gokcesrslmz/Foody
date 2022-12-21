@@ -23,5 +23,10 @@ class FirstViewController: UIViewController {
     func new () {
         
     }
+    
+    
+    func secondNew() {
+        
+    }
 }
 
