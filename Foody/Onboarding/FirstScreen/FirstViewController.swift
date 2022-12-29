@@ -28,11 +28,8 @@ class FirstViewController: UIViewController {
     
     func setupView(){
         appNameLbl.text = "FOODY"
-//        view.addSubview(appNameLbl)
         descriptionLbl.text = "Discover Delicious Recipes"
-//        view.addSubview(descriptionLbl)
         descLbl.text = "Easily find the best recipe you are looking for with all the details"
-//        view.addSubview(descLbl)
         firstOnboardingImg.image = UIImage(named: "first-onboarding")
         nextButton.layer.cornerRadius = 15
        
