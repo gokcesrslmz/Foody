@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,33 +17,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUl-sj-ppi">
-                                <rect key="frame" x="180" y="437.5" width="54" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
-                                <connections>
-                                    <action selector="nextButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hbi-uK-Nyv"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crb-oC-6i6">
-                                <rect key="frame" x="169.5" y="390" width="75" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="42s-TO-UWh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="at6-XY-N1P">
+                                <rect key="frame" x="20" y="48" width="374" height="800"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="FOODY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyc-sS-Hdp">
+                                        <rect key="frame" x="12" y="0.0" width="350" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="kRp-6g-g7A"/>
+                                            <constraint firstAttribute="height" constant="70" id="l2d-cz-pMF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="70"/>
+                                        <color key="textColor" name="ThemeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jjC-3z-9JX">
+                                        <rect key="frame" x="0.0" y="80" width="374" height="500"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="749" text="Discover Delicious Recipes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rd-Su-u8Z">
+                                        <rect key="frame" x="27" y="590" width="320.5" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="OWS-VE-KfB"/>
+                                            <constraint firstAttribute="width" constant="320.5" id="enm-Oa-6ri"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="27"/>
+                                        <color key="textColor" name="side-color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Easily find the best recipe you are looking for with all the details" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDs-JK-FqY">
+                                        <rect key="frame" x="12" y="670" width="350" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="5M5-fT-0hr"/>
+                                            <constraint firstAttribute="height" constant="70" id="eh0-Yf-diF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="19"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8F-jB-MbY">
+                                        <rect key="frame" x="62" y="750" width="250" height="50"/>
+                                        <color key="backgroundColor" name="ThemeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="IGz-Gs-eJ0"/>
+                                            <constraint firstAttribute="width" constant="250" id="Om6-3D-pgz"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Next">
+                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="nextButtonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Rto-a0-koB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="LUl-sj-ppi" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="7um-ES-zX9"/>
-                            <constraint firstItem="LUl-sj-ppi" firstAttribute="top" secondItem="crb-oC-6i6" secondAttribute="bottom" constant="26.5" id="Gwn-0H-Xx4"/>
-                            <constraint firstItem="crb-oC-6i6" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="UQz-my-I6x"/>
-                            <constraint firstItem="LUl-sj-ppi" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="cAk-36-Zhb"/>
+                            <constraint firstItem="at6-XY-N1P" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="5YI-WO-4Ox"/>
+                            <constraint firstItem="at6-XY-N1P" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="LTQ-j0-5iP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="at6-XY-N1P" secondAttribute="trailing" constant="20" id="aNb-Ln-vCR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="at6-XY-N1P" secondAttribute="bottom" priority="999" id="cp7-44-Y9F"/>
+                            <constraint firstItem="at6-XY-N1P" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gaI-HH-6xs"/>
+                            <constraint firstItem="at6-XY-N1P" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="n4j-6U-ntN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appNameLbl" destination="iyc-sS-Hdp" id="j8A-KB-nRS"/>
+                        <outlet property="descLbl" destination="KDs-JK-FqY" id="Qcc-Lm-KfB"/>
+                        <outlet property="descriptionLbl" destination="1Rd-Su-u8Z" id="Qxe-bC-bxv"/>
+                        <outlet property="firstOnboardingImg" destination="jjC-3z-9JX" id="IhW-MY-3VH"/>
+                        <outlet property="nextButton" destination="z8F-jB-MbY" id="xQL-bq-aO6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,8 +96,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="ThemeColor">
+            <color red="0.93300002813339233" green="0.48199999332427979" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="side-color">
+            <color red="0.25099998712539673" green="0.34900000691413879" blue="0.3919999897480011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
