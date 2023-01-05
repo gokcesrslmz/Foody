@@ -14,6 +14,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
     
+    var startButtonCompletion:(() -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,8 +31,6 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func startButtonClicked(_ sender: Any) {
-        
-        print("buttona tıklandı")
+        startButtonCompletion?()
     }
-    
 }

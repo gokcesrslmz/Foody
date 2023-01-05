@@ -25,6 +25,22 @@ final class Coordinator {
     
     private func showSecondView() {
         let viewController = SecondViewController.create()
+        viewController.startButtonCompletion = {
+            self.showLoginView()
+        }
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func showLoginView() {
+        let viewController = LoginViewController.create()
+        viewController.clickedRegisterCompletion = {
+            self.showRegisterView()
+        }
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func showRegisterView() {
+        let viewController = RegisterViewController.create()
         navigationController.pushViewController(viewController, animated: true)
     }
 }
