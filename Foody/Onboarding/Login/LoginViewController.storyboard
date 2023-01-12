@@ -77,7 +77,7 @@
                                                 <nil key="textColor"/>
                                                 <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iTn-nZ-U4E">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="iTn-nZ-U4E">
                                                 <rect key="frame" x="130" y="0.0" width="42" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="89o-Mr-wMo"/>
@@ -113,11 +113,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7W-GJ-6tV">
-                                                <rect key="frame" x="184" y="25.5" width="90" height="50"/>
+                                                <rect key="frame" x="184" y="30.5" width="90" height="40"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="f3C-dN-Gqn"/>
-                                                    <constraint firstAttribute="height" constant="50" id="nQo-4U-FS4"/>
+                                                    <constraint firstAttribute="height" constant="40" id="nQo-4U-FS4"/>
                                                 </constraints>
                                                 <color key="tintColor" name="ThemeColor"/>
                                                 <state key="normal" title="Button"/>
