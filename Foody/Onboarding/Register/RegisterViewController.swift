@@ -81,8 +81,9 @@ class RegisterViewController: UIViewController {
         let firstDate = calender.startOfDay(for: dateFormatter.date(from: date)!)
         let twiceDate = calender.startOfDay(for: Date())
         let component = calender.dateComponents([.year], from: firstDate, to: twiceDate)
+        
         if let year = component.year, year >= 15 {
-            print("age:\(year)")
+            return year
         }else {
             showAlert(title: "Warning!", message: "Children under the age of 15 are not allowed")
         }
@@ -99,8 +100,10 @@ class RegisterViewController: UIViewController {
                 
             }else if !password.isValidPassword(password: password){
                 showAlert(title: "Warning!", message: "Please Enter Valid Password!")
+                
             }else if dateOfBirth.isEmpty {
                 showAlert(title: "Warning!", message: "Please Enter Birth Of Date!")
+                
             }else if usernameText.text != "" && emailText.text != "" && passwordText.text != "" && dateText.text != ""  {
                 if dateDayCount(date: dateText.text ?? "") > 15 {
                     
@@ -127,6 +130,7 @@ class RegisterViewController: UIViewController {
 }
 
 extension String {
+    
     func isValidEmail(email:String) -> Bool {
         let emailRegex = "[a-zA-Z0-9.%-]+@[a-zA-Z0-9-]+.[a-zA-Z]{2,4}"
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
