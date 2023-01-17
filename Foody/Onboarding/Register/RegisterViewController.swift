@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var dateText: UITextField!
     @IBOutlet weak var signUpClicked: UIButton!
+    @IBOutlet weak var passwordLabel: UILabel!
     
     let datePicker = UIDatePicker()
     
@@ -29,6 +30,7 @@ class RegisterViewController: UIViewController {
         emailText.placeholder = "Email"
         passwordText.placeholder = "Password"
         dateText.placeholder = "Date of Birth"
+        passwordLabel.text = "Şifre en az 6 karakterli en az bir büyük harf ve bir rakam içermelidir."
         
         datePicker.addTarget(self, action: #selector(dateChange(datePicker:)), for: UIControl.Event.valueChanged)
         datePicker.frame.size = CGSize(width: 0, height: 300)
@@ -78,10 +80,10 @@ class RegisterViewController: UIViewController {
         dateFormatter.dateFormat = format
         
         let calender = Calendar.current
-        let firstDate = calender.startOfDay(for: dateFormatter.date(from: date)!)
+        let firstDate = calender.startOfDay(for: dateFormatter.date(from: date) ?? Date())
         let twiceDate = calender.startOfDay(for: Date())
         let component = calender.dateComponents([.year], from: firstDate, to: twiceDate)
-        
+       
         if let year = component.year, year >= 15 {
             return year
         }else {
@@ -139,7 +141,7 @@ extension String {
     }
     
     func isValidPassword(password:String) -> Bool {
-        let passwordRegex = "^(?=.*[A-Z])(?=.*\\d)[A-Z\\d]{6,}$" // Minimum 6 characters at least 1 uppercase letter and 1 Number
+        let passwordRegex = "^(?=.*[A-Za-z])(?=.*\\d)[a-zA-Z\\d]{6,}$" // Minimum 6 characters at least 1 uppercase letter and 1 Number
         let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegex)
         let result = passwordTest.evaluate(with:password)
         return result

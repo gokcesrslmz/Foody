@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -67,8 +68,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifre en az 6 karakterli en az bir büyük harf ve rakam içermelidir." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnz-Rg-fll">
-                                        <rect key="frame" x="0.0" y="280" width="414" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnz-Rg-fll">
+                                        <rect key="frame" x="15" y="280" width="384" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="txd-rP-znB"/>
                                         </constraints>
@@ -87,12 +88,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fnz-Rg-fll" secondAttribute="trailing" constant="15" id="0nK-Z2-Tcj"/>
                                     <constraint firstItem="HIT-c9-UDy" firstAttribute="leading" secondItem="6nZ-Ut-fUK" secondAttribute="leading" constant="15" id="1QH-Op-nRN"/>
-                                    <constraint firstItem="fnz-Rg-fll" firstAttribute="leading" secondItem="6nZ-Ut-fUK" secondAttribute="leading" id="B1Z-4h-t0Z"/>
                                     <constraint firstAttribute="trailing" secondItem="s7k-5A-ZGR" secondAttribute="trailing" constant="15" id="EyF-Bu-jhq"/>
                                     <constraint firstAttribute="trailing" secondItem="sYr-Ml-bhO" secondAttribute="trailing" constant="15" id="NYS-1Z-d9g"/>
                                     <constraint firstItem="s7k-5A-ZGR" firstAttribute="leading" secondItem="6nZ-Ut-fUK" secondAttribute="leading" constant="15" id="Sya-8C-kyd"/>
-                                    <constraint firstItem="fnz-Rg-fll" firstAttribute="leading" secondItem="6nZ-Ut-fUK" secondAttribute="leading" id="ZV4-7c-VXt"/>
+                                    <constraint firstItem="fnz-Rg-fll" firstAttribute="leading" secondItem="6nZ-Ut-fUK" secondAttribute="leading" constant="15" id="krb-jo-Ood"/>
                                     <constraint firstItem="sYr-Ml-bhO" firstAttribute="leading" secondItem="6nZ-Ut-fUK" secondAttribute="leading" constant="15" id="pnR-ux-hSK"/>
                                     <constraint firstItem="YNP-WK-DmJ" firstAttribute="leading" secondItem="6nZ-Ut-fUK" secondAttribute="leading" constant="15" id="z1T-qJ-JuK"/>
                                     <constraint firstAttribute="trailing" secondItem="HIT-c9-UDy" secondAttribute="trailing" constant="15" id="zfX-7O-Nfe"/>
@@ -107,7 +108,6 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6nZ-Ut-fUK" secondAttribute="bottom" priority="999" id="7bS-Vw-78x"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6nZ-Ut-fUK" secondAttribute="trailing" id="Epp-58-2oJ"/>
                             <constraint firstItem="MKH-hL-ZRI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Xwq-D3-JXU"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fnz-Rg-fll" secondAttribute="trailing" id="dLL-A7-E6m"/>
                             <constraint firstItem="6nZ-Ut-fUK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="de2-7n-TYe"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YNP-WK-DmJ" secondAttribute="trailing" constant="15" id="jRC-JJ-TFK"/>
                             <constraint firstItem="MKH-hL-ZRI" firstAttribute="top" secondItem="HIT-c9-UDy" secondAttribute="bottom" constant="45" id="yqi-n5-PW9"/>
@@ -116,6 +116,7 @@
                     <connections>
                         <outlet property="dateText" destination="HIT-c9-UDy" id="tmf-v3-deY"/>
                         <outlet property="emailText" destination="YNP-WK-DmJ" id="haL-be-q9e"/>
+                        <outlet property="passwordLabel" destination="fnz-Rg-fll" id="z9U-zV-ubA"/>
                         <outlet property="passwordText" destination="sYr-Ml-bhO" id="UaE-pE-wEN"/>
                         <outlet property="signUpClicked" destination="MKH-hL-ZRI" id="RJP-hN-MkO"/>
                         <outlet property="usernameText" destination="s7k-5A-ZGR" id="19q-aV-1ab"/>
