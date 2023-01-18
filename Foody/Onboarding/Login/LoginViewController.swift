@@ -10,7 +10,7 @@ import FirebaseAuth
 import Firebase
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var loginImageView: UIImageView!
     @IBOutlet weak var loginLbl: UILabel!
     @IBOutlet weak var welcomeLbl: UILabel!
@@ -21,13 +21,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerBttn: UIButton!
     
     var clickedRegisterCompletion:(() -> ())?
-    let defaults: UserDefaults? = UserDefaults.standard
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let currentUser = Auth.auth().currentUser
         if currentUser != nil {
-            if ((defaults?.bool(forKey: "ISRemember")) != nil) {
+            if ((defaults.bool(forKey: "ISRemember"))) {
                 rememberMeSwitch.setOn(true, animated: false)
             }else {
                 rememberMeSwitch.setOn(false, animated: false)
@@ -42,15 +42,14 @@ class LoginViewController: UIViewController {
         loginBttn.layer.cornerRadius = 15
         registerBttn.layer.cornerRadius = 15
     }
-   
-   
+    
     @IBAction func rememberMeSwitchChck(_ sender: UISwitch) {
-            if sender.isOn {
-                defaults?.set(true, forKey: "ISRemember")
-            }else {
-                defaults?.set(false, forKey: "ISRemember")
-            }
+        if sender.isOn {
+            defaults.set(true, forKey: "ISRemember")
+        }else {
+            defaults.set(false, forKey: "ISRemember")
         }
+    }
     
     @IBAction func loginBttnClicked(_ sender: Any) {
         guard let email = emailTextFld.text else { return }
@@ -73,14 +72,14 @@ class LoginViewController: UIViewController {
             }
         }
     }
-
+    
     private func errorMessage(titleInput:String, messageInput:String){
-           let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
-           let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
-           alert.addAction(okButton)
-           self.present(alert, animated: true, completion: nil)
-       }
-         
+        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func clickedRegister(_ sender: Any) {
         clickedRegisterCompletion?()
     }
@@ -88,17 +87,17 @@ class LoginViewController: UIViewController {
 }
 
 extension String {
-        func isValidEmail(email:String) -> Bool {
-             let emailRegex = "[a-zA-Z0-9.%-]+@[a-zA-Z0-9-]+.[a-zA-Z]{2,4}"
-             let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-             let result = emailTest.evaluate(with: email)
-             return result
-         }
-
-         func isValidPassword(password:String) -> Bool {
-             let passwordRegex = "^(?=.*[A-Z])(?=.*\\d)[A-Z\\d]{6,}$" // Minimum 6 characters at least 1 uppercase letter and 1 Number
-             let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegex)
-             let result = passwordTest.evaluate(with:password)
-             return result
-         }
- }
+    func isValidEmail(email:String) -> Bool {
+        let emailRegex = "[a-zA-Z0-9.%-]+@[a-zA-Z0-9-]+.[a-zA-Z]{2,4}"
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        let result = emailTest.evaluate(with: email)
+        return result
+    }
+    
+    func isValidPassword(password:String) -> Bool {
+        let passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6,}$"
+        let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegex)
+        let result = passwordTest.evaluate(with:password)
+        return result
+    }
+}
