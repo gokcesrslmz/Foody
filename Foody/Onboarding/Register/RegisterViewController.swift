@@ -57,11 +57,7 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func doneTapped () {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
-        
-        dateText.text = formatter.string(from: datePicker.date)
+        dateText.text = formatDate(date: datePicker.date)
         self.view.endEditing(true)
     }
     
@@ -80,10 +76,15 @@ class RegisterViewController: UIViewController {
         dateFormatter.dateFormat = format
         
         let calender = Calendar.current
-        let firstDate = calender.startOfDay(for: dateFormatter.date(from: date) ?? Date())
+        guard let date = dateFormatter.date(from: date) else{
+            showAlert(title: "Warning!", message: "Children under the age of 15 are not allowed")
+            return 0
+        }
+        
+        let firstDate = calender.startOfDay(for: date)
         let twiceDate = calender.startOfDay(for: Date())
         let component = calender.dateComponents([.year], from: firstDate, to: twiceDate)
-       
+        
         if let year = component.year, year >= 15 {
             return year
         }else {
