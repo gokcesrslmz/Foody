@@ -131,22 +131,3 @@ class RegisterViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
 }
-
-extension String {
-    
-    func isValidEmail(email:String) -> Bool {
-        let emailRegex = "[a-zA-Z0-9.%-]+@[a-zA-Z0-9-]+.[a-zA-Z]{2,4}"
-        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        let result = emailTest.evaluate(with: email)
-        return result
-    }
-    
-    func isValidPassword(password:String) -> Bool {
-        let passwordRegex = "^(?=.*[A-Za-z])(?=.*\\d)[a-zA-Z\\d]{6,}$" // Minimum 6 characters at least 1 uppercase letter and 1 Number
-        let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegex)
-        let result = passwordTest.evaluate(with:password)
-        return result
-    }
-}
-
-

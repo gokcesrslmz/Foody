@@ -21,18 +21,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerBttn: UIButton!
     
     var clickedRegisterCompletion:(() -> ())?
+    var loginSuccessful:(() -> ())?
     let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let currentUser = Auth.auth().currentUser
-        if currentUser != nil {
-            if ((defaults.bool(forKey: "ISRemember"))) {
-                rememberMeSwitch.setOn(true, animated: false)
-            }else {
-                rememberMeSwitch.setOn(false, animated: false)
-            }
-        }
         rememberMeSwitch.addTarget(self, action: #selector(rememberMeSwitchChck), for: .valueChanged)
         emailTextFld.layer.cornerRadius = 20
         passwordTextFld.layer.cornerRadius = 20
@@ -67,7 +60,7 @@ class LoginViewController: UIViewController {
                 if error != nil{
                     self.errorMessage(titleInput: "Warning!", messageInput: "Try again.")
                 }else{
-                    self.errorMessage(titleInput: "Welcome!", messageInput: "Success Login")
+                    self.loginSuccessful?()
                 }
             }
         }
@@ -82,22 +75,5 @@ class LoginViewController: UIViewController {
     
     @IBAction func clickedRegister(_ sender: Any) {
         clickedRegisterCompletion?()
-    }
-    
-}
-
-extension String {
-    func isValidEmail(email:String) -> Bool {
-        let emailRegex = "[a-zA-Z0-9.%-]+@[a-zA-Z0-9-]+.[a-zA-Z]{2,4}"
-        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        let result = emailTest.evaluate(with: email)
-        return result
-    }
-    
-    func isValidPassword(password:String) -> Bool {
-        let passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6,}$"
-        let passwordTest = NSPredicate(format:"SELF MATCHES %@", passwordRegex)
-        let result = passwordTest.evaluate(with:password)
-        return result
     }
 }

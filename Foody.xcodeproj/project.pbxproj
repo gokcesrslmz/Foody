@@ -19,6 +19,11 @@
 		09E6E1E029512068005827A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6E1DF29512068005827A6 /* ViewController.swift */; };
 		09E6E1E42966BF91005827A6 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E6E1E32966BF91005827A6 /* LoginViewController.storyboard */; };
 		09E6E1E62966BFA2005827A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6E1E52966BFA2005827A6 /* LoginViewController.swift */; };
+		09E6E1EC2981CB16005827A6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6E1EB2981CB16005827A6 /* String.swift */; };
+		09E6E1F02981CCD3005827A6 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E6E1EF2981CCD3005827A6 /* HomeViewController.storyboard */; };
+		09E6E1F22981CCE2005827A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6E1F12981CCE2005827A6 /* HomeViewController.swift */; };
+		09E6E1F42981CD25005827A6 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6E1F32981CD25005827A6 /* FoodDetailViewController.swift */; };
+		09E6E1F62981CD43005827A6 /* FoodDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E6E1F52981CD43005827A6 /* FoodDetailViewController.storyboard */; };
 		3BC8206A2975BB6300AA77DA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC820682975BB6300AA77DA /* RegisterViewController.swift */; };
 		3BC8206B2975BB6300AA77DA /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC820692975BB6300AA77DA /* RegisterViewController.storyboard */; };
 		4D61E69D0C447F856BDD469D /* Pods_Foody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB5AB84A874DFEF54A34C65 /* Pods_Foody.framework */; };
@@ -41,6 +46,11 @@
 		09E6E1DF29512068005827A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		09E6E1E32966BF91005827A6 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		09E6E1E52966BFA2005827A6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		09E6E1EB2981CB16005827A6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		09E6E1EF2981CCD3005827A6 /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
+		09E6E1F12981CCE2005827A6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		09E6E1F32981CD25005827A6 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		09E6E1F52981CD43005827A6 /* FoodDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodDetailViewController.storyboard; sourceTree = "<group>"; };
 		3BC820682975BB6300AA77DA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3BC820692975BB6300AA77DA /* RegisterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
 		712981A82966F6A1001DF165 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -84,6 +94,8 @@
 				712981A82966F6A1001DF165 /* GoogleService-Info.plist */,
 				09E6E1D329511C33005827A6 /* Coordinator.swift */,
 				09E6E1D529511CA4005827A6 /* Onboarding */,
+				09E6E1ED2981CCA0005827A6 /* Home */,
+				09E6E1EE2981CCB2005827A6 /* Detail */,
 				09E6E1BF29511BB8005827A6 /* AppDelegate.swift */,
 				09E6E1C129511BB8005827A6 /* SceneDelegate.swift */,
 				09E6E1C829511BB9005827A6 /* Assets.xcassets */,
@@ -127,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				09E6E1DF29512068005827A6 /* ViewController.swift */,
+				09E6E1EB2981CB16005827A6 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -147,6 +160,24 @@
 				3BC820682975BB6300AA77DA /* RegisterViewController.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		09E6E1ED2981CCA0005827A6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				09E6E1EF2981CCD3005827A6 /* HomeViewController.storyboard */,
+				09E6E1F12981CCE2005827A6 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		09E6E1EE2981CCB2005827A6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				09E6E1F52981CD43005827A6 /* FoodDetailViewController.storyboard */,
+				09E6E1F32981CD25005827A6 /* FoodDetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		28FCE982D4B41659FF2326D6 /* Pods */ = {
@@ -230,6 +261,8 @@
 				09E6E1CC29511BB9005827A6 /* LaunchScreen.storyboard in Resources */,
 				09E6E1E42966BF91005827A6 /* LoginViewController.storyboard in Resources */,
 				3BC8206B2975BB6300AA77DA /* RegisterViewController.storyboard in Resources */,
+				09E6E1F02981CCD3005827A6 /* HomeViewController.storyboard in Resources */,
+				09E6E1F62981CD43005827A6 /* FoodDetailViewController.storyboard in Resources */,
 				09E6E1D929511D4F005827A6 /* SecondViewController.storyboard in Resources */,
 				09E6E1C929511BB9005827A6 /* Assets.xcassets in Resources */,
 				712981A92966F6A1001DF165 /* GoogleService-Info.plist in Resources */,
@@ -287,8 +320,11 @@
 			files = (
 				09E6E1E62966BFA2005827A6 /* LoginViewController.swift in Sources */,
 				09E6E1E029512068005827A6 /* ViewController.swift in Sources */,
+				09E6E1F42981CD25005827A6 /* FoodDetailViewController.swift in Sources */,
 				09E6E1D429511C33005827A6 /* Coordinator.swift in Sources */,
+				09E6E1EC2981CB16005827A6 /* String.swift in Sources */,
 				3BC8206A2975BB6300AA77DA /* RegisterViewController.swift in Sources */,
+				09E6E1F22981CCE2005827A6 /* HomeViewController.swift in Sources */,
 				09E6E1C429511BB8005827A6 /* FirstViewController.swift in Sources */,
 				09E6E1C029511BB8005827A6 /* AppDelegate.swift in Sources */,
 				09E6E1DB29511D66005827A6 /* SecondViewController.swift in Sources */,

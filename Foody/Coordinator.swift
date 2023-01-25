@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 final class Coordinator {
     
@@ -32,15 +33,36 @@ final class Coordinator {
     }
     
     private func showLoginView() {
+        if Auth.auth().currentUser != nil, UserDefaults.standard.bool(forKey: "ISRemember"){
+            showHomePage()
+            return
+        }
+        
         let viewController = LoginViewController.create()
         viewController.clickedRegisterCompletion = {
             self.showRegisterView()
+        }
+        viewController.loginSuccessful = {
+            self.showHomePage()
         }
         navigationController.pushViewController(viewController, animated: true)
     }
     
     private func showRegisterView() {
         let viewController = RegisterViewController.create()
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func showHomePage() {
+        let viewController = HomeViewController.create()
+        viewController.goToDetail = {
+            self.showDetailPage()
+        }
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    private func showDetailPage() {
+        let viewController = FoodDetailViewController.create()
         navigationController.pushViewController(viewController, animated: true)
     }
 }
