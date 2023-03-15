@@ -29,14 +29,22 @@
                                             <constraint firstAttribute="width" constant="300" id="xc8-2r-EcW"/>
                                         </constraints>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ey1-kk-aMX">
+                                        <rect key="frame" x="87" y="205" width="240" height="10"/>
+                                        <viewLayoutGuide key="safeArea" id="ReW-yO-FdK"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="Dey-NS-8lR"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Squash linguine" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0i-Qb-vsi">
-                                        <rect key="frame" x="57" y="205" width="300" height="30"/>
+                                        <rect key="frame" x="57" y="220" width="300" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMd-mB-CIY">
-                                        <rect key="frame" x="57" y="240" width="300" height="101.5"/>
+                                        <rect key="frame" x="20" y="255" width="374" height="101.5"/>
                                         <string key="text">Put the onion and oil in a large pan and fry over a fairly high heat for 3-4 mins.
 Add the garlic and mince and fry until they both brown.
 </string>
@@ -44,17 +52,24 @@ Add the garlic and mince and fry until they both brown.
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2c-Z5-y7x">
+                                        <rect key="frame" x="87" y="361.5" width="240" height="10"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="OPL-Tc-78d"/>
+                                        </constraints>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVP-G8-uCe">
-                                        <rect key="frame" x="132" y="346.5" width="150" height="20.5"/>
+                                        <rect key="frame" x="132" y="376.5" width="150" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XBJ-79-p0L">
-                                        <rect key="frame" x="57" y="372" width="300" height="402.5"/>
+                                        <rect key="frame" x="20" y="402" width="374" height="372.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <inset key="scrollIndicatorInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="20" id="efu-oq-jDU">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="20" id="efu-oq-jDU">
                                             <size key="itemSize" width="100" height="100"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -62,7 +77,7 @@ Add the garlic and mince and fry until they both brown.
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ingredientCell" id="But-5R-TNl" customClass="FoodDetailCollectionViewCell" customModule="Foody" customModuleProvider="target">
-                                                <rect key="frame" x="75" y="0.0" width="150" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RKP-Eo-Tbh">
                                                     <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
@@ -107,10 +122,7 @@ Add the garlic and mince and fry until they both brown.
                                         </cells>
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVg-i5-Rik">
-                                        <rect key="frame" x="82" y="779.5" width="250" height="34.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="JeA-5E-tJA"/>
-                                        </constraints>
+                                        <rect key="frame" x="10" y="779.5" width="394" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Watch how it's prepared!"/>
                                         <connections>
@@ -119,19 +131,19 @@ Add the garlic and mince and fry until they both brown.
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="XBJ-79-p0L" secondAttribute="trailing" constant="57" id="1TI-Ui-Cxd"/>
-                                    <constraint firstAttribute="trailing" secondItem="nMd-mB-CIY" secondAttribute="trailing" constant="57" id="9Ff-M2-gP6"/>
+                                    <constraint firstAttribute="trailing" secondItem="XBJ-79-p0L" secondAttribute="trailing" constant="20" id="1TI-Ui-Cxd"/>
+                                    <constraint firstAttribute="trailing" secondItem="nMd-mB-CIY" secondAttribute="trailing" constant="20" id="9Ff-M2-gP6"/>
+                                    <constraint firstItem="TVg-i5-Rik" firstAttribute="leading" secondItem="meW-gJ-zR1" secondAttribute="leading" constant="10" id="Fh9-5i-1fb"/>
                                     <constraint firstItem="nMd-mB-CIY" firstAttribute="top" secondItem="b0i-Qb-vsi" secondAttribute="bottom" constant="5" id="PVz-e3-OdM"/>
                                     <constraint firstAttribute="trailing" secondItem="AVP-G8-uCe" secondAttribute="trailing" constant="132" id="YbF-ZS-7SC"/>
                                     <constraint firstAttribute="trailing" secondItem="b0i-Qb-vsi" secondAttribute="trailing" constant="57" id="gj5-RY-XjF"/>
-                                    <constraint firstItem="XBJ-79-p0L" firstAttribute="leading" secondItem="meW-gJ-zR1" secondAttribute="leading" constant="57" id="h3K-WY-QeB"/>
+                                    <constraint firstItem="XBJ-79-p0L" firstAttribute="leading" secondItem="meW-gJ-zR1" secondAttribute="leading" constant="20" id="h3K-WY-QeB"/>
                                     <constraint firstItem="AVP-G8-uCe" firstAttribute="leading" secondItem="meW-gJ-zR1" secondAttribute="leading" constant="132" id="hs0-wP-glM"/>
                                     <constraint firstItem="XBJ-79-p0L" firstAttribute="top" secondItem="AVP-G8-uCe" secondAttribute="bottom" constant="5" id="j7a-V6-Cw7"/>
-                                    <constraint firstItem="nMd-mB-CIY" firstAttribute="leading" secondItem="meW-gJ-zR1" secondAttribute="leading" constant="57" id="liM-7n-GrA"/>
-                                    <constraint firstItem="AVP-G8-uCe" firstAttribute="top" secondItem="nMd-mB-CIY" secondAttribute="bottom" constant="5" id="pqU-3C-jSf"/>
+                                    <constraint firstItem="nMd-mB-CIY" firstAttribute="leading" secondItem="meW-gJ-zR1" secondAttribute="leading" constant="20" id="liM-7n-GrA"/>
+                                    <constraint firstAttribute="trailing" secondItem="TVg-i5-Rik" secondAttribute="trailing" constant="10" id="x5T-KO-Iij"/>
                                     <constraint firstItem="TVg-i5-Rik" firstAttribute="top" secondItem="XBJ-79-p0L" secondAttribute="bottom" constant="5" id="xBr-OQ-vf6"/>
                                     <constraint firstItem="b0i-Qb-vsi" firstAttribute="leading" secondItem="meW-gJ-zR1" secondAttribute="leading" constant="57" id="zC1-Cz-EfO"/>
-                                    <constraint firstItem="b0i-Qb-vsi" firstAttribute="top" secondItem="fTe-QH-JnD" secondAttribute="bottom" constant="5" id="zfN-69-hjd"/>
                                 </constraints>
                             </stackView>
                         </subviews>
