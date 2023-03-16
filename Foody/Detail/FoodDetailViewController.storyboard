@@ -126,7 +126,7 @@ Add the garlic and mince and fry until they both brown.
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Watch how it's prepared!"/>
                                         <connections>
-                                            <action selector="buttonClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZIK-WG-GKl"/>
+                                            <action selector="openYoutubeLink:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QRm-WR-oVq"/>
                                         </connections>
                                     </button>
                                 </subviews>

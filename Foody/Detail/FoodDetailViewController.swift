@@ -8,7 +8,7 @@
 import UIKit
 
 class FoodDetailViewController: UIViewController {
-    let dataSource : [String] = ["onion", "olive oil", "garlic", "mushrooms", "tomate", "parmesan", "spagetti", "salt"]
+    private let dataSource : [String] = ["onion", "olive oil", "garlic", "mushrooms", "tomate", "parmesan", "spagetti", "salt"]
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var mealRecipeLabel: UILabel!
@@ -20,12 +20,12 @@ class FoodDetailViewController: UIViewController {
         mealNameLabel.text = "Spaghetti"
         mealRecipeLabel.text = "Put the onion and oil in a large pan and fry over a fairly high heat for 3-4 mins. Add the garlic and mince and fry until they both brown. Add the mushrooms and herbs, and cook for another couple of mins. "
         imageView.image = UIImage(named: "spaghetti")
-        youtubeButton.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        youtubeButton.addTarget(self, action: #selector(openYoutubeLink), for: .touchUpInside)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
     
-    @IBAction func buttonClicked(_ sender: Any) {
+    @IBAction private func openYoutubeLink(_ sender: Any) {
         if let urlToOpen = URL(string: "https://www.youtube.com/watch?v=jBoMTZIHqLc"){
             UIApplication.shared.open(urlToOpen)
         }
