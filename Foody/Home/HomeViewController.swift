@@ -48,6 +48,7 @@ extension HomeViewController : UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         goToDetail?()
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 }
 
