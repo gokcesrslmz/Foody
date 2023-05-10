@@ -30,6 +30,7 @@
 		3BC8206B2975BB6300AA77DA /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC820692975BB6300AA77DA /* RegisterViewController.storyboard */; };
 		4D61E69D0C447F856BDD469D /* Pods_Foody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB5AB84A874DFEF54A34C65 /* Pods_Foody.framework */; };
 		712981A92966F6A1001DF165 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 712981A82966F6A1001DF165 /* GoogleService-Info.plist */; };
+		71964127298297310090A1AD /* FoodDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71964126298297310090A1AD /* FoodDetailCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		3BC820682975BB6300AA77DA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3BC820692975BB6300AA77DA /* RegisterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
 		712981A82966F6A1001DF165 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		71964126298297310090A1AD /* FoodDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		B8651E8E463FB7B7FB5E5F5E /* Pods-Foody.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foody.release.xcconfig"; path = "Target Support Files/Pods-Foody/Pods-Foody.release.xcconfig"; sourceTree = "<group>"; };
 		BBB5AB84A874DFEF54A34C65 /* Pods_Foody.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foody.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -182,6 +184,7 @@
 			children = (
 				09E6E1F52981CD43005827A6 /* FoodDetailViewController.storyboard */,
 				09E6E1F32981CD25005827A6 /* FoodDetailViewController.swift */,
+				71964126298297310090A1AD /* FoodDetailCollectionViewCell.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				09E6E1E62966BFA2005827A6 /* LoginViewController.swift in Sources */,
 				09E6E1E029512068005827A6 /* ViewController.swift in Sources */,
 				09E6E1F42981CD25005827A6 /* FoodDetailViewController.swift in Sources */,
+				71964127298297310090A1AD /* FoodDetailCollectionViewCell.swift in Sources */,
 				09E6E1D429511C33005827A6 /* Coordinator.swift in Sources */,
 				3BAD300C298808AB00B3C078 /* CategoryCollectionViewCell.swift in Sources */,
 				09E6E1EC2981CB16005827A6 /* String.swift in Sources */,
