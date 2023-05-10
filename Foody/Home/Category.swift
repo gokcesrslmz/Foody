@@ -8,13 +8,12 @@
 import Foundation
 import UIKit
 
-struct Category{
+struct Category {
     let title: String?
     let image: UIImage?
 }
 
 let categories: [Category] = [
-    
 Category(title: "Beef", image: UIImage(named: "chicken1")),
 Category(title: "Breakfast", image: UIImage(named: "chicken1")),
 Category(title: "Chicken", image:UIImage(named: "chicken1")),
@@ -29,5 +28,4 @@ Category(title: "Side", image: UIImage(named: "chicken1")),
 Category(title: "Starter", image: UIImage(named: "chicken1")),
 Category(title: "Vegan", image: UIImage(named: "chicken1")),
 Category(title: "Vegatarian", image:UIImage(named: "chicken1"))
-
 ]
