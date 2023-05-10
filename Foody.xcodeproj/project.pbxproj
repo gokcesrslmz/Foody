@@ -24,6 +24,8 @@
 		09E6E1F22981CCE2005827A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6E1F12981CCE2005827A6 /* HomeViewController.swift */; };
 		09E6E1F42981CD25005827A6 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E6E1F32981CD25005827A6 /* FoodDetailViewController.swift */; };
 		09E6E1F62981CD43005827A6 /* FoodDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E6E1F52981CD43005827A6 /* FoodDetailViewController.storyboard */; };
+		3BAD300C298808AB00B3C078 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAD300B298808AB00B3C078 /* CategoryCollectionViewCell.swift */; };
+		3BAD300E2988110900B3C078 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAD300D2988110900B3C078 /* Category.swift */; };
 		3BC8206A2975BB6300AA77DA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC820682975BB6300AA77DA /* RegisterViewController.swift */; };
 		3BC8206B2975BB6300AA77DA /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BC820692975BB6300AA77DA /* RegisterViewController.storyboard */; };
 		4D61E69D0C447F856BDD469D /* Pods_Foody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB5AB84A874DFEF54A34C65 /* Pods_Foody.framework */; };
@@ -52,6 +54,8 @@
 		09E6E1F12981CCE2005827A6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		09E6E1F32981CD25005827A6 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		09E6E1F52981CD43005827A6 /* FoodDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodDetailViewController.storyboard; sourceTree = "<group>"; };
+		3BAD300B298808AB00B3C078 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		3BAD300D2988110900B3C078 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		3BC820682975BB6300AA77DA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3BC820692975BB6300AA77DA /* RegisterViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
 		712981A82966F6A1001DF165 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 			children = (
 				09E6E1EF2981CCD3005827A6 /* HomeViewController.storyboard */,
 				09E6E1F12981CCE2005827A6 /* HomeViewController.swift */,
+				3BAD300D2988110900B3C078 /* Category.swift */,
+				3BAD300B298808AB00B3C078 /* CategoryCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -326,10 +332,12 @@
 				09E6E1F42981CD25005827A6 /* FoodDetailViewController.swift in Sources */,
 				71964127298297310090A1AD /* FoodDetailCollectionViewCell.swift in Sources */,
 				09E6E1D429511C33005827A6 /* Coordinator.swift in Sources */,
+				3BAD300C298808AB00B3C078 /* CategoryCollectionViewCell.swift in Sources */,
 				09E6E1EC2981CB16005827A6 /* String.swift in Sources */,
 				3BC8206A2975BB6300AA77DA /* RegisterViewController.swift in Sources */,
 				09E6E1F22981CCE2005827A6 /* HomeViewController.swift in Sources */,
 				09E6E1C429511BB8005827A6 /* FirstViewController.swift in Sources */,
+				3BAD300E2988110900B3C078 /* Category.swift in Sources */,
 				09E6E1C029511BB8005827A6 /* AppDelegate.swift in Sources */,
 				09E6E1DB29511D66005827A6 /* SecondViewController.swift in Sources */,
 				09E6E1C229511BB8005827A6 /* SceneDelegate.swift in Sources */,
@@ -472,7 +480,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7J5PN5WZ56;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Foody/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -501,7 +509,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7J5PN5WZ56;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Foody/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

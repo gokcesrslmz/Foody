@@ -9,26 +9,54 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    var selectedIndex: IndexPath?
     var goToDetail:(() -> ())?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.isUserInteractionEnabled = true
+        
+        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension HomeViewController: UICollectionViewDataSource{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categories.count
     }
     
-    @IBAction func detailButtonClicked(_ sender: Any) {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"CategoryCollectionViewCell" , for: indexPath) as! CategoryCollectionViewCell
+        
+        cell.setup(with: categories[indexPath.row])
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 20
+        return cell
+    }
+}
+
+extension HomeViewController : UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         goToDetail?()
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let size = (collectionView.frame.size.width - 10) / 2
+        return CGSize(width: size , height: size)
     }
-    */
-
 }
