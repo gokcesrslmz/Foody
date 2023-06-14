@@ -62,7 +62,12 @@ final class Coordinator {
     }
     
     private func showDetailPage() {
-        let viewController = FoodDetailViewController.create()
+        let viewController = SubCategoryViewController.create()
         navigationController.pushViewController(viewController, animated: true)
     }
+    
+//    private func subCategoryPage() {
+//        let viewController = SubCategoryViewController.create()
+//        navigationController.pushViewController(viewController, animated: true)
+//    }
 }
